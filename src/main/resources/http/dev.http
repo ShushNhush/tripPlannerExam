@@ -1,0 +1,62 @@
+
+
+### Get all trips
+GET {{url}}/trips
+accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Get trip by id
+GET {{url}}/trips/1
+accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Create trip
+POST {{url}}/trips
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "category": "SNOW",
+  "starttime": "2024-11-04T09:00:00",
+  "name": "Mountain Adventure",
+  "endtime": "2024-11-04T17:00:00",
+  "startposition": "Mountain Base Camp",
+  "price": 150.0
+}
+
+### Update trip
+PUT {{url}}/trips/3
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "category": "SNOW",
+  "starttime": "2024-11-04T09:00:00",
+  "name": "updated name !!!!",
+  "endtime": "2024-11-04T17:00:00",
+  "startposition": "Everrest Base Camp",
+  "price": 150.0
+}
+
+### Add guide to trip
+PUT {{url}}/trips/2/guides/1
+accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Delete trip
+DELETE {{url}}/trips/0
+accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Get trips by category
+GET {{url}}/trips/categories/SNOW
+accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Total weight for trip
+GET {{url}}/trips/totalWeight/1
+accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+
+

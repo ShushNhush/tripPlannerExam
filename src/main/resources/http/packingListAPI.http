@@ -1,0 +1,9 @@
+
+### Get packing list by category
+GET {{url}}/packinglist/BEACH
+accept: application/json
+
+### Get Guide profits
+GET {{url}}/guides/profits
+accept: application/json
+Authorization: Bearer {{jwt_token}}
